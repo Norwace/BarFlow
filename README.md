@@ -10,6 +10,8 @@ Tegneprogram for drikkesystemer (øl, postmix og vann). Du drar inn utstyr og ko
 
 ## Hente BarFlow på en annen PC
 
+**På nettet:** https://norwace.github.io/BarFlow/ – åpne i Edge eller Chrome. Siden oppdateres av seg selv når en ny versjon lastes opp til repoet. Tegninger lagres som .barflow-filer på PC-en, og eget bibliotek ligger i nettleseren (eksporter det med ⋯ ved «+ Nytt utstyr» for å ta det med til en annen PC).
+
 Alt ligger i GitHub-repoet **Norwace/BarFlow**.
 
 - **Bare programmet:** åpne `BarFlow.html` i repoet og trykk nedlastingsknappen (Download raw file). Dobbeltklikk fila.

@@ -89,7 +89,7 @@ Eget verktøy for å tegne drikkesystemer som skjema (ikke målestokk), koble sa
 - Regulatorer og gassfordelere i startsettet har nå intern link (for opplysing). Komponenter som allerede ligger i en tegning oppdateres med «Oppdater alle i tegningen» under Flere valg.
 
 ## Endringslogg
-- **v0.12.1:** versjonsmerke i verktøylinja (BarFlow | v0.12.1, versjon i grønt, hentes fra package.json). Kildekoden legges i GitHub-repoet Norwace/BarFlow med ferdig BarFlow.html i roten.
+- **v0.12.1:** versjonsmerke i verktøylinja (BarFlow | v0.12.1, versjon i grønt, hentes fra package.json). Kildekoden legges i GitHub-repoet Norwace/BarFlow (offentlig) med ferdig BarFlow.html i roten. GitHub Actions (.github/workflows/pages.yml) bygger og publiserer til https://norwace.github.io/BarFlow/ ved hver push til main.
 - **v0.12:**
   - Etikett og status legges på side uten porter.
   - Status og bryter er samme brikke.
