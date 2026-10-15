@@ -1,0 +1,84 @@
+{
+  "name": "barflow",
+  "productName": "BarFlow",
+  "version": "0.12.1",
+  "description": "Tegneprogram for drikkesystemer",
+  "author": "Simen",
+  "private": true,
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "dist:win": "npm run build && electron-builder --win --x64",
+    "build:html": "tsc -b && vite build --mode html"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "@xyflow/react": "^12.12.0",
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8",
+    "exceljs": "^4.4.0",
+    "html-to-image": "^1.11.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vite-plugin-singlefile": "^2.0.3",
+    "zustand": "^4.5.7"
+  },
+  "build": {
+    "appId": "no.simen.barflow",
+    "productName": "BarFlow",
+    "copyright": "Simen",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "build/icon.png",
+      "package.json"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "signAndEditExecutable": true
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "BarFlow",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "artifactName": "BarFlow-Setup-${version}.${ext}"
+    },
+    "fileAssociations": [
+      {
+        "ext": "barflow",
+        "name": "BarFlow-tegning",
+        "description": "BarFlow-tegning",
+        "icon": "build/icon.ico"
+      }
+    ],
+    "compression": "maximum",
+    "electronLanguages": [
+      "nb",
+      "en-US"
+    ]
+  }
+}
